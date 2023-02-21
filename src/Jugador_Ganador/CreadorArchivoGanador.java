@@ -6,17 +6,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-public class Creador_Archivo_ganador extends Lector_de_Texto{
+public class CreadorArchivoGanador {
 
-    public  void Creador_salida(String s,int [] a) throws IOException {
-        File salida  = new File(s);
+    public  void CreadorSalida(String RutaSalida,int [] Ganador) throws IOException {
+        File salida  = new File(RutaSalida);
         salida.createNewFile();
         FileWriter escritor = new FileWriter(salida);
         BufferedWriter bw=new BufferedWriter(escritor);
 
-        bw.write(Integer.toString(a[0]));
+        bw.write(Integer.toString(Ganador[0]));
         bw.write(" ");
-        bw.write(Integer.toString(a[1]));
+        bw.write(Integer.toString(Ganador[1]));
         bw.close();
 
     }

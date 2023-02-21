@@ -1,22 +1,26 @@
 package Jugador_Ganador;
 
-public class Analizador_Ganador {
+import java.util.Arrays;
+
+public class AnalizadorGanador {
 
 
 
 
     public  int[] anlizador (String [] entradas){
+        System.out.println(Arrays.toString(entradas));
         int [] Resultado_Ganador = new  int [2];
         int j_1= 0;
         int j_2= 0;
         int dif_Mayor = 0;
         int dif = 0;
         int ganador= 0;
-        for (int i = 1 ;i<entradas.length;i++){
+        for (int i = 0 ;i<entradas.length;i++){
 
             String [] arry = entradas[i].split(" ");
             j_1 = j_1+ Integer.parseInt(arry[0]);
             j_2 = j_2+ Integer.parseInt(arry[1]);
+
             dif=j_1-j_2;
             if (dif <0)
                 dif = dif * -1;
@@ -24,13 +28,13 @@ public class Analizador_Ganador {
 
             if (dif>dif_Mayor) {
                 dif_Mayor = dif;
-                if (j_1>j_2){
+                if (j_1>j_2 || j_1==j_2){
                     ganador = 1;
                 }else {
                     ganador = 2;
                 }
             }
-
+            System.out.println(ganador+" "+ dif_Mayor);
             Resultado_Ganador= new int[]{ganador, dif_Mayor};
 
 
