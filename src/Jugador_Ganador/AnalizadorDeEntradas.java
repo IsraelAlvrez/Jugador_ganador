@@ -14,7 +14,6 @@ public class AnalizadorDeEntradas {
 
         for (int i = 0; i <Entrda.length;i++){
             if (!Entrda[i].matches("^[0-9]+\\s[0-9]+$")){
-                System.out.println(Arrays.toString(Entrda));
                 throw new IllegalArgumentException("Tu entrada tiene Caracteres que no son numermos");
             }
         }

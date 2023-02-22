@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class LectorDeTexto {
 
 
-    public  String [] Lector_Entrada(String Ruta ){
+    public  String [] LectorEntrada(String Ruta ){
 
         try{
             File Docuemento = new File(Ruta);
             Scanner sc = new Scanner(Docuemento);
-            String [] Entradas = new String[Integer.parseInt(sc.nextLine())];
+            String [] Entradas = new String[Integer.parseInt(sc.nextLine().trim())];
 
            try {
 

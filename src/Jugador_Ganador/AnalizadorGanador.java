@@ -7,8 +7,7 @@ public class AnalizadorGanador {
 
 
 
-    public  int[] anlizador (String [] entradas){
-        System.out.println(Arrays.toString(entradas));
+    public  int[] Analizador (String [] entradas){
         int [] Resultado_Ganador = new  int [2];
         int j_1= 0;
         int j_2= 0;
@@ -34,7 +33,6 @@ public class AnalizadorGanador {
                     ganador = 2;
                 }
             }
-            System.out.println(ganador+" "+ dif_Mayor);
             Resultado_Ganador= new int[]{ganador, dif_Mayor};
 
 
